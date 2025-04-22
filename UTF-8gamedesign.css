@@ -1,0 +1,107 @@
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #008080;
+  color: #FFDF29;
+  text-align: center;
+  font-family: 'Courier New', Courier, cursive;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: white;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+}
+
+.timer, .errors, .accuracy,
+.charactersPerMinute, .wordsPerMinute {
+  background-color: #28999F;
+  height: 80px;
+  width: 70px;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 20%;
+}
+
+.charactersPerMinute, .wordsPerMinute  {
+  display: none;
+}
+
+.secondaryHeader {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.currentTime, .currentError,
+.speedAccuracy, .currentCharactersPerMinute,
+.currentWPM {
+  font-size: 2.75rem;
+}
+
+.movieQuote {
+  background-color: #28999F;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 25px;
+}
+
+.inputBox {
+  background-color: #FFF48D;
+  height: 80px;
+  width: 40%;
+  font-family: 'Courier New', Courier, cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 15px;
+  padding: 20px;
+  border: 0px;
+}
+
+.restartButton {
+  display: none;
+  background-color: #326765;
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 0px;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+.correct {
+  color: darkgreen;
+}
+
+.jumbotron {
+  background-color: #005f5f;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 20px;
+  color: #FFDF29;
+  text-align: center;
+  font-family: 'Courier New', Courier, cursive;
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}

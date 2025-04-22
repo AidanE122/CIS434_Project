@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Set language to english-->
+<head>
+    <title>Movie themed Speed Typing Test</title> <!-- title of the webpage-->
+    <!-- this will link the CSS file to the html file -->
+    <link rel="stylesheet" href="UTF-8gamedesign.css">
+</head>
+<body>
+      <!-- Jumbotron Section -->
+  <div class="jumbotron">
+    <h1>🎬 Welcome to the Movie Speed Typing Test!</h1>
+    <p>Test your typing speed and accuracy with famous movie quotes.</p>
+  </div>
+
+  <div class="background-overlay"></div>
+  <!--This is the main container for dividing everything into specific area's espcially for the CSS FIle-->
+  <div class = "mainContainer">
+    <div class="layout">
+      <div class="wordsPerMinute"> 
+        <div class = "secondaryHeader">Words Per Minute</div>
+        <div class = "currentWPM">100</div>
+      </div>
+      <div class = "charactersPerMinute">
+        <div class = "secondaryHeader">Charcters Per Minute</div>
+        <div class = "currentCPM">100</div>
+      </div>
+      <div class = "errors">
+        <div class = "secondaryHeader">Typing Errors:</div>
+        <div class = "currentError">0</div>
+      </div>
+      <div class = "timer">
+        <div class = "secondaryHeader">Timer:</div>
+        <div class = "currentTime">60s</div>
+      </div>
+      <div class = "accuracy">
+        <div class = "secondaryHeader">Speed Accuracy:</div>
+        <div class = "speedAccuracy">100</div>
+      </div>
+    </div>
+    <div class="movieQuote"> Click here to begin your test: </div>
+    <textarea class="inputBox" 
+    placeholder="BEGIN TYPING HERE!"
+    oninput="processCurrentText()"
+    onfocus="startGame()">
+  </textarea>
+    <!--Button is in active-->
+    <button class = "restartButton"
+    onclick="resetValues()">
+    Restart 
+  </button>
+  </div>
+
+  <!-- link javascript file here-->
+   <script src="game.js">
+   </script>
+</body>
+</html>
