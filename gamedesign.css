@@ -32,6 +32,7 @@ body {
   margin: 8px;
   padding: 12px;
   border-radius: 20%;
+  border: 10px solid black;
 }
 
 .charactersPerMinute, .wordsPerMinute  {
@@ -70,12 +71,27 @@ body {
 }
 
 .restartButton {
-  display: none;
-  background-color: #d4af37;
-  font-size: 1.5rem;
-  padding: 20px;
-  border: 0px;
+  background-color: #d4af37; /* Hollywood gold */
+  color: #1c1c1c; /* Cinematic dark */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', Courier, cursive;
 }
+
+.restartButton:hover {
+  background-color: white;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
 
 .incorrect {
   color: red;
@@ -94,6 +110,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Courier New', Courier, cursive;
+  border: 10px solid black;
 }
 
 .jumbotron h1 {
