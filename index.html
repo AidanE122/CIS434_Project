@@ -1,57 +1,95 @@
 <!DOCTYPE html>
-<html lang="en"> <!--Set language to english-->
+<html lang="en">
 <head>
-    <title>Movie themed Speed Typing Test</title> <!-- title of the webpage-->
-    <!-- this will link the CSS file to the html file -->
-    <link rel="stylesheet" href="gamedesign.css">
+  <title>Movie themed Speed Typing Test</title>
+  <link rel="stylesheet" href="gamedesign.css">
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-      <!-- Jumbotron Section -->
   <div class="jumbotron">
     <h1>🎬 Welcome to the Movie Speed Typing Test!</h1>
     <p>Test your typing speed and accuracy with famous movie quotes.</p>
+    <!-- Login / Logout Controls -->
+    <div id="auth-controls">
+      <button id="login-button">Login</button>
+      <button id="logout-button" style="display:none;">Logout</button>
+    </div>
   </div>
 
   <div class="background-overlay"></div>
-  <!--This is the main container for dividing everything into specific area's espcially for the CSS FIle-->
-  <div class = "mainContainer">
+
+  <!-- Main Game Area -->
+  <div class="mainContainer" id="game-container" style="display:none;">
     <div class="layout">
       <div class="wordsPerMinute"> 
-        <div class = "secondaryHeader">Words Per Minute</div>
-        <div class = "currentWPM">100</div>
+        <div class="secondaryHeader">Words Per Minute</div>
+        <div class="currentWPM">100</div>
       </div>
-      <div class = "charactersPerMinute">
-        <div class = "secondaryHeader">Charcters Per Minute</div>
-        <div class = "currentCPM">100</div>
+      <div class="charactersPerMinute">
+        <div class="secondaryHeader">Characters Per Minute</div>
+        <div class="currentCPM">100</div>
       </div>
-      <div class = "errors">
-        <div class = "secondaryHeader">Typing Errors:</div>
-        <div class = "currentError">0</div>
+      <div class="errors">
+        <div class="secondaryHeader">Typing Errors:</div>
+        <div class="currentError">0</div>
       </div>
-      <div class = "timer">
-        <div class = "secondaryHeader">Timer:</div>
-        <div class = "currentTime">60s</div>
+      <div class="timer">
+        <div class="secondaryHeader">Timer:</div>
+        <div class="currentTime">60s</div>
       </div>
-      <div class = "accuracy">
-        <div class = "secondaryHeader">Speed Accuracy:</div>
-        <div class = "speedAccuracy">100</div>
+      <div class="accuracy">
+        <div class="secondaryHeader">Speed Accuracy:</div>
+        <div class="speedAccuracy">100</div>
       </div>
     </div>
-    <div class="movieQuote"> Click here to begin your test: </div>
-    <textarea class="inputBox" 
-    placeholder="BEGIN TYPING HERE!"
-    oninput="processCurrentText()"
-    onfocus="startGame()">
-  </textarea>
-    <!--Button is in active-->
-    <button class = "restartButton"
-    onclick="resetValues()">
-    Restart 
-  </button>
+
+    <div class="movieQuote">Click here to begin your test:</div>
+    <textarea class="inputBox" placeholder="BEGIN TYPING HERE!" oninput="processCurrentText()" onfocus="startGame()"></textarea>
+    <button class="restartButton" onclick="resetValues()">Restart</button>
   </div>
 
-  <!-- link javascript file here-->
-   <script src="game.js">
-   </script>
+  <script src="game.js"></script>
+  <script>
+    const loginButton = document.getElementById("login-button");
+    const logoutButton = document.getElementById("logout-button");
+    const gameContainer = document.getElementById("game-container");
+
+    // Initialize Netlify Identity
+    netlifyIdentity.init();
+
+    netlifyIdentity.on("init", user => {
+      toggleAuthUI(user);
+    });
+
+    netlifyIdentity.on("login", user => {
+      toggleAuthUI(user);
+      netlifyIdentity.close();
+    });
+
+    netlifyIdentity.on("logout", () => {
+      toggleAuthUI(null);
+    });
+
+    loginButton.addEventListener("click", () => {
+      netlifyIdentity.open("login");
+    });
+
+    logoutButton.addEventListener("click", () => {
+      netlifyIdentity.logout();
+    });
+
+    function toggleAuthUI(user) {
+      if (user) {
+        loginButton.style.display = "none";
+        logoutButton.style.display = "inline-block";
+        gameContainer.style.display = "flex";
+      } else {
+        loginButton.style.display = "inline-block";
+        logoutButton.style.display = "none";
+        gameContainer.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
