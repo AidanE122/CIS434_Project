@@ -105,3 +105,30 @@ body {
 .jumbotron p {
   font-size: 1.2rem;
 }
+
+  #auth-controls button {
+    background-color: #d4af37; /* Hollywood gold */
+    color: #1c1c1c; /* Cinematic dark */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Georgia', serif;
+  }
+
+  #auth-controls button:hover {
+    background-color: #f9d45c;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  #auth-controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+
