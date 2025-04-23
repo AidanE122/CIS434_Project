@@ -87,11 +87,11 @@ body {
 }
 
 .jumbotron {
-  background-color: #005f5f;
+  background-color: #24e9fe;
   padding: 40px 20px;
   border-radius: 20px;
   margin: 20px;
-  color: #FFDF29;
+  color: white;
   text-align: center;
   font-family: 'Courier New', Courier, cursive;
 }
@@ -118,7 +118,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-family: 'Georgia', serif;
+    font-family: 'Courier New', Courier, cursive;
   }
 
   #auth-controls button:hover {
