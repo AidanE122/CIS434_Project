@@ -3,12 +3,20 @@ let TIME_LIMIT = 60;
 
 // define quotes to be used
 let quotes_array = [
-  "Push yourself, because no one else is going to do it for you.",
-  "Failure is the condiment that gives success its flavor.",
-  "Wake up with determination. Go to bed with satisfaction.",
-  "It's going to be hard, but hard does not mean impossible.",
-  "Learning never exhausts the mind.",
-  "The only way to do great work is to love what you do."
+  "Just when I thought I was out, they pull me back in.",
+  "Keep the change, ya filthy animal",
+  "Hasta La Vista, baby",
+  "You can't handle the truth!",
+  "You're killin' me, Smalls",
+  "Life is like a box of chocolates, you never know what you're gonna get",
+  "Now that's some high quality H20",
+  "Get busy livin', or get busy dyin'",
+  "Houston, we have a problem",
+  "They may take our lives, but they'll never take our freedom!",
+  "Show me the money!",
+  "Do you like scary movies?",
+  "The first rule of fight club is, you do not talk about fight club",
+  "How you like them apples?"
 ];
 
 // selecting required elements
