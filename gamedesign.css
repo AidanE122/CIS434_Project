@@ -43,13 +43,13 @@ body {
   text-transform: uppercase;
   font-size: 0.6rem;
   font-weight: 600;
+  font-weight: bold;
 }
 
 .currentTime, .currentError,
 .speedAccuracy, .currentCharactersPerMinute,
 .currentWPM, .currentCPM {
   font-size: 2.75rem;
-  font-weight: bold;
 }
 
 .movieQuote {
