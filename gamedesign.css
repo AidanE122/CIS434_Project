@@ -58,6 +58,7 @@ body {
   padding: 25px;
   border-radius: 25px;
   border: 6px solid black;
+  font-weight: bold;
 }
 
 .inputBox {
@@ -123,6 +124,7 @@ body {
 
 .jumbotron p {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
   #auth-controls button {
